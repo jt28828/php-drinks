@@ -18,6 +18,7 @@ class DrinkController extends Controller
     public function index()
     {
         $drinks = Drink::all();
+        return $drinks;
     }
 
     /**
@@ -89,7 +90,8 @@ class DrinkController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Updates the required drink
+
      * Address: PUT drink/{id}
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -97,7 +99,76 @@ class DrinkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return "updating drink id: ".$id;
+        // The updated drink variables to change
+        $updateDrink = [];
+        try {
+            $drink = Drink::findOrFail($id);
+        } catch (Exception $ex) {
+            return ["error" => "No drink found"];
+        }
+
+        //Need to check for all the values individually
+        if (isset($request['name'])) {
+            if ($request['name'] != null) {
+                $drink['drink_name'] = $request['name'];
+            } else {
+                return ["error" => "A drink needs a name"];
+            }
+        }
+
+        if (isset($request['image']) && $request['image'] != null) {
+            $drink['drink_image'] = $request['image'];
+        }
+
+        if (isset($request['color']) && $request['color'] != null) {
+            $drink['drink_color'] = $request['color'];
+        }
+
+        if (isset($request['ingredient1'])) {
+            if ($request['ingredient1'] != null) {
+                $drink['ingredient_1'] = $request['ingredient1'];
+            } else {
+                return ["error" => "A drink needs at least 1 ingredient"];
+            }
+        }
+
+        if (isset($request['ingredient1Amount'])) {
+            if ($request['ingredient1Amount'] != null) {
+                $drink['ingredient_1_amount'] = $request['ingredient1Amount'];
+            } else {
+                return ["error" => "A drink needs at least 1 ingredient"];
+            }
+        }
+
+        if (isset($request['ingredient2']) && $request['ingredient2'] != null) {
+            $drink['ingredient_2'] = $request['name'];
+        }
+
+        if (isset($request['ingredient2Amount']) && $request['ingredient2Amount'] != null) {
+            $drink['ingredient_2_amount'] = $request['ingredient1'];
+        }
+
+        if (isset($request['ingredient3']) && $request['ingredient3'] != null) {
+            $drink['ingredient_3'] = $request['name'];
+        }
+
+        if (isset($request['ingredient3Amount']) && $request['ingredient3Amount'] != null) {
+            $drink['ingredient_3_amount'] = $request['ingredient1'];
+        }
+
+        if (isset($request['ingredient4']) && $request['ingredient4'] != null) {
+            $drink['ingredient_4'] = $request['name'];
+        }
+
+        if (isset($request['ingredient4Amount']) && $request['ingredient4Amount'] != null) {
+            $drink['ingredient_4_amount'] = $request['ingredient1'];
+        }
+        //Update any values that have been set
+        if ($drink->save()) {
+            return ["success" => $drink->drink_name." was Updated"];
+        } else {
+            return ["error" => "Drink could not be updated. Try again"];
+        }
     }
 
     /**
@@ -108,6 +179,16 @@ class DrinkController extends Controller
      */
     public function destroy($id)
     {
-        return "deleting drink id: ".$id;
+        try {
+            $drink = Drink::findOrFail($id);
+            $drinkName = $drink['drink_name'];
+        } catch (Exception $ex) {
+            return ["error" => "No drink found"];
+        }
+        if ($drink->delete()) {
+            return ["success" => $drinkName." was deleted"];
+        } else {
+            return ["error" => "Drink could not be deleted. Try again"];
+        }
     }
 }
