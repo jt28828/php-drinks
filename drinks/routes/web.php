@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource("drink", "DrinkController");
+
+//The bottles routes
+Route::resource("bottle", "BottleController");

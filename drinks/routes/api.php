@@ -17,4 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//The drinks routes
 Route::resource("drink", "DrinkController");
+
+//The bottles routes
+Route::resource("bottle", "BottleController");

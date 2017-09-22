@@ -165,7 +165,7 @@ class DrinkController extends Controller
         }
         //Update any values that have been set
         if ($drink->save()) {
-            return ["success" => $drink->drink_name." was Updated"];
+            return ["success" => $drink->drink_name." was updated"];
         } else {
             return ["error" => "Drink could not be updated. Try again"];
         }
