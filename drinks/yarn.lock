@@ -217,7 +217,7 @@ async@^2.1.2, async@^2.1.5, async@^2.4.1:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/async/-/async-2.5.0.tgz#843190fd6b7357a0b9e1c956edddd5ec8462b54d"
   dependencies:
-    lodash "^4.14.0"
+    lodash "^4.17.13"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -289,7 +289,7 @@ babel-core@^6.24.1, babel-core@^6.26.0:
     convert-source-map "^1.5.0"
     debug "^2.6.8"
     json5 "^0.5.1"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
     minimatch "^3.0.4"
     path-is-absolute "^1.0.1"
     private "^0.1.7"
@@ -333,7 +333,7 @@ babel-helper-define-map@^6.24.1:
     babel-helper-function-name "^6.24.1"
     babel-runtime "^6.26.0"
     babel-types "^6.26.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-helper-explode-assignable-expression@^6.24.1:
   version "6.24.1"
@@ -380,7 +380,7 @@ babel-helper-regex@^6.24.1:
   dependencies:
     babel-runtime "^6.26.0"
     babel-types "^6.26.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-helper-remap-async-to-generator@^6.24.1:
   version "6.24.1"
@@ -470,7 +470,7 @@ babel-plugin-transform-es2015-block-scoping@^6.23.0:
     babel-template "^6.26.0"
     babel-traverse "^6.26.0"
     babel-types "^6.26.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-plugin-transform-es2015-classes@^6.23.0:
   version "6.24.1"
@@ -682,7 +682,7 @@ babel-register@^6.26.0:
     babel-runtime "^6.26.0"
     core-js "^2.5.0"
     home-or-tmp "^2.0.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
@@ -701,7 +701,7 @@ babel-template@^6.24.1, babel-template@^6.26.0:
     babel-traverse "^6.26.0"
     babel-types "^6.26.0"
     babylon "^6.18.0"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-traverse@^6.24.1, babel-traverse@^6.26.0:
   version "6.26.0"
@@ -715,7 +715,7 @@ babel-traverse@^6.24.1, babel-traverse@^6.26.0:
     debug "^2.6.8"
     globals "^9.18.0"
     invariant "^2.2.2"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
   version "6.26.0"
@@ -723,7 +723,7 @@ babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
   dependencies:
     babel-runtime "^6.26.0"
     esutils "^2.0.2"
-    lodash "^4.17.4"
+    lodash "^4.17.13"
     to-fast-properties "^1.0.3"
 
 babylon@^6.18.0:
@@ -3668,8 +3668,8 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
-mem@^1.1.0:
-  version "1.1.0"
+mem@^4.0.0:
+  version "4.0.0"
   resolved "https://registry.yarnpkg.com/mem/-/mem-1.1.0.tgz#5edd52b485ca1d900fe64895505399a0dfa45f76"
   dependencies:
     mimic-fn "^1.0.0"
@@ -6006,7 +6006,7 @@ webpack-merge@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.1.0.tgz#6ad72223b3e0b837e531e4597c199f909361511e"
   dependencies:
-    lodash "^4.17.4"
+    lodash "^4.17.13"
 
 webpack-notifier@^1.5.0:
   version "1.5.0"
